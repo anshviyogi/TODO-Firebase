@@ -1,0 +1,55 @@
+.header__logo{
+    width: 100px;
+}
+
+.logo__title{
+    display: flex;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.header{
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.header__title{
+    margin-top: 25px;
+    margin-left: 5px;
+    color: black;
+    font-weight: bolder;
+}
+
+.login__register{
+    margin-top: 5px;
+    margin-left: 50%;
+    display: flex;
+}
+
+.login__button{
+    margin-right: 55px;
+    text-decoration: none;
+}
+.register__button{
+    text-decoration: none;
+}
+
+.signInUser{
+    margin-right: 50px;
+    text-decoration: none;
+}
+
+.link{
+    text-decoration: none;
+}
+
+.signoutButton{
+    cursor: pointer;
+}
+
+.login-alert{
+    margin-top: 25px;
+    text-align: center;
+    color: red;
+}

@@ -1,0 +1,12 @@
+.items{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-bottom: 25px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.option{
+    margin-left: 25px;
+    color: red;
+    font-weight: bolder;
+}
