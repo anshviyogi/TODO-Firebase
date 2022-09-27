@@ -37,7 +37,7 @@ function Header() {
         <div className='login__register'>
 
             {user? <h3 className='signInUser'>Hello {user.multiFactor.user.email.split('@')[0]} </h3>: <Link to='/login' className='link'><h3 className='signInUser'>Sign in</h3></Link>}
-
+<br/>
             {user? <h3 className='signoutButton' onClick={signoutHandler}>Sign out</h3> : <Link to='/register' className='register__button'>
                 <h3>Register</h3>
             </Link>

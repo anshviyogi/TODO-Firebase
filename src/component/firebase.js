@@ -2,8 +2,6 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 
-// Installation - 
-
 const firebaseConfig = {
   apiKey: "AIzaSyBKu012UpiQ8xVXADpJJKk-JOkYOOn8FbM",
   authDomain: "todo-react-fe9da.firebaseapp.com",

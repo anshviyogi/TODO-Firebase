@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
@@ -12,15 +12,21 @@ function AddTODO() {
   const [show, setShow] = useState(false);
   const handleShow = () => setShow(true);
 
-  // User ID
-  // console.log(user.multiFactor.user.uid)
-
   // Managing States
-
     const[title,setTitle] = useState('')    
     const[description,setDescription] = useState('')
     const[date,setDate] = useState('')
+    const[creationTime,setCreationTime] = useState('')
 
+    const handelTime = () =>{
+      let time = new Date().toLocaleTimeString();
+      setCreationTime(time.toString());
+    }
+
+    useEffect(()=>{
+      handelTime()
+    },[date])
+    
     const handleClose = (e) =>{
       e.preventDefault()
       setShow(false)
@@ -29,7 +35,9 @@ function AddTODO() {
         title:title,
         description:description,
         date:date,
-        id:uuid()
+        id:uuid(),
+        createdBy:user.multiFactor.user.email,
+        creationTime:creationTime
       })
       .then(()=>{
         alert("Item Added Successfully")

@@ -11,16 +11,11 @@ function TODOS() {
   const[{user}] = useStateValue()
   const[id,setId] = useState('')
 
-  // User ID from Firebase
-  console.log(user.multiFactor.user.uid)
-
   // User ID From Product
-
   const[players,setPlayers] = useState([])
   const[team,setTeam] = useState([])
 
   // Fetching data from Firebase
-
 useEffect(()=>{
   players.map(playerData =>{
     setId(playerData.userId)
@@ -84,12 +79,16 @@ useEffect(()=>{
   }
 
   return (
+    <div>
+      <br/>
+      <br/>
+      
     <Container maxW="800px">
       <div style={{display:'flex',justifyContent:'center'}}>
       <AddTODO/>
       </div>
       <Flex justifyContent='space-between' height='90vh' align='center'>
-      <Stack width="300px">
+      <Stack width="300px" style={{marginTop:"50%"}}>
         <Heading fontSize='3xl' color='yellow.800' textAlign='center' style={{marginTop:"300px"}}>
           Task List 1
         </Heading>
@@ -99,7 +98,7 @@ useEffect(()=>{
         }
         </List>
       </Stack>
-      <Stack width="300px">
+      <Stack width="300px" style={{marginTop:"50%"}}>
       <Heading fontSize='3xl' color='teal.800' textAlign='center' style={{marginTop:"300px"}}>
           Task List 2
         </Heading>
@@ -111,6 +110,7 @@ useEffect(()=>{
       </Stack>
       </Flex>
     </Container>
+    </div>
   )
 }
 
